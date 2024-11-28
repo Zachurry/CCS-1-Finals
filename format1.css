@@ -1,0 +1,227 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light background color for the body */
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: scroll; /* Ensure scrolling is allowed vertically */
+}
+
+/* Image Container with Parallax */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ensure the image covers the full height of the viewport */
+    overflow: hidden;
+    background: url('homepageb.png') center/cover no-repeat;
+    background-attachment: fixed; /* Parallax effect on background */
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 80px; /* Ensures there's space for the navbar */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 34px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure navbar is above the content */
+}
+
+.navbar .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ff9c00;
+    margin-top: 15px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ff9c00;
+}
+
+/* Main Text */
+.main-text {
+    text-align: center;
+    margin: auto;
+    padding: 120px 20px; /* Adjust padding to ensure text is not hidden behind navbar */
+    color: #f8f5f0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1; /* Ensure main text is above the parallax background */
+}
+
+/* Text and Carousel Layout */
+.text-and-carousel {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    width: 100%;
+}
+
+/* Dumaguete Section */
+.dumaguete-container {
+    position: relative;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.5); /* Dark background for contrast */
+    border-radius: 10px;
+    color: #fefefe;
+    text-align: justify;
+    width: 45%;
+    margin-top: 7vh;
+    z-index: 2;
+}
+
+.dumaguete-header {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.dumaguete-paragraph {
+    font-size: 15px;
+    color: #fff;
+}
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    width: 700px;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 4vh;
+}
+
+.carousel {
+    display: flex;
+    width: calc(300px * 4);
+    animation: slide 12s infinite;
+}
+
+.carousel-item {
+    flex: 0 0 700px;
+    height: 280px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Keyframes for Carousel */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-300px); }
+    50% { transform: translateX(-600px); }
+    75% { transform: translateX(-900px); }
+    100% { transform: translateX(0); }
+}
+
+/* Blog Section */
+.b/* Blog Section */
+.blog-section {
+    padding: 40px 20px;
+    background: #222;
+    color: #fff;
+    flex-grow: 1;
+    z-index: 1;
+    margin-top: 20px;
+    height: auto; /* Ensure the height is dynamic based on content */
+    overflow-y: auto; /* Enable scrolling if the content overflows */
+}
+
+/* Blog Post Container */
+.blog-post-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    overflow-y: auto; /* Make sure content scrolls within the container */
+    height: auto; /* Adjust the height dynamically based on the content */
+}
+
+.blog-post {
+    background: rgb(32, 32, 32);
+    border-radius: 10px;
+    padding: 20px;
+    color: #fefefe;
+    text-align: justify;
+    height: 300px; /* Set a height for blog posts */
+    overflow: hidden;
+}
+
+
+.blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.blog-post h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ff914d;
+}
+
+.blog-post p {
+    font-size: 14px;
+    color: #fff;
+}
+
+/* Blog Post Button */
+.read-more {
+    display: block;
+    margin-top: 10px;
+    padding: 0.5rem 1rem;
+    background: #ff914d;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.read-more:hover {
+    background: #d7783b;
+}
